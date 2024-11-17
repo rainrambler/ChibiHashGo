@@ -25,7 +25,7 @@ chibihash64(const void *keyIn, ptrdiff_t len, uint64_t seed)
 
 	const uint64_t P1 = UINT64_C(0x2B7E151628AED2A5);
 	const uint64_t P2 = UINT64_C(0x9E3793492EEDC3F7);
-	const uint64_t P3 = UINT64_C(0x3243F6A8885A308C);
+	const uint64_t P3 = UINT64_C(0x3243F6A8885A308D);
 
 	uint64_t h[4] = { P1, P2, P3, seed };
 
