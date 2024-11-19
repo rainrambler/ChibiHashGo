@@ -1,3 +1,9 @@
+# ChibiHashGo: A Go port version of ChibiHash
+
+A small implementation with only ~80 loc in Go.
+
+No external dependencies.
+
 # ChibiHash: Small, Fast 64 bit hash function
 
 I started writing this because all the 64 bit hash functions I came across were
