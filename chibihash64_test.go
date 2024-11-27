@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -28,7 +27,6 @@ func TestChibihash641(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			u8arr := []uint8(tt.input)
-			fmt.Printf("Input: %s [%d]: seed: %x\n", tt.input, tt.len0, tt.seed)
 			ans := chibihash64(u8arr, tt.len0, tt.seed)
 			if ans != tt.want {
 				t.Errorf("got %x, want %x", ans, tt.want)

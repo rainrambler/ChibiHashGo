@@ -53,18 +53,9 @@ func chibihash64(keyIn []uint8, len0 int, seed uint64) uint64 {
 
 	i := 0
 	for l > 0 {
-		fmt.Printf("DBG2.1: h(%d) = %x\n", i, h[i])
-		tmp := uint64(k[kpos]) | (uint64(k[kpos+1]) << 8)
-		fmt.Printf("DBG2.1: tmp = %x\n", tmp)
-		h[i] ^= tmp
-		fmt.Printf("DBG2.2: h(%d) = %x, k[0]=%x, k[1]=%x\n",
-			i, h[i], k[kpos], k[kpos+1])
+		h[i] ^= uint64(k[kpos]) | (uint64(k[kpos+1]) << 8)
 		h[i] *= P3
-		fmt.Printf("DBG2.3: h(%d) = %x\n", i, h[i])
 		h[i] ^= h[i] >> 31
-
-		fmt.Printf("DBG3: h(%d) = %x\n", i, h[i])
-
 		l -= 2
 		kpos += 2
 		i++
