@@ -2,8 +2,6 @@ package chibihashgo
 
 import (
 	"testing"
-
-	"github.com/rainrambler/chibihashgo"
 )
 
 func TestChibihash641(t *testing.T) {
