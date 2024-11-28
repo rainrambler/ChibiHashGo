@@ -8,7 +8,7 @@ func chibihash64__load64le(p *[8]uint8) uint64 {
 	return binary.LittleEndian.Uint64(p[:])
 }
 
-func chibihash64(keyIn []uint8, len0 int, seed uint64) uint64 {
+func Chibihash64(keyIn []uint8, len0 int, seed uint64) uint64 {
 	k := keyIn
 	kpos := 0
 	l := len0
